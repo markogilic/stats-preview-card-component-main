@@ -1,0 +1,135 @@
+/*font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  max-width: 1440px;
+  width: 100%;
+  background-color: hsl(233, 47%, 7%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 1em;
+}
+
+.container {
+  background-color: hsl(244, 38%, 16%);
+  width: 70%;
+  margin: 10em auto;
+  border-radius: 0.3em;
+  display: flex;
+}
+.left {
+  width: 50%;
+  padding: 3em;
+}
+.left span {
+  color: hsl(277, 64%, 61%);
+}
+.left p {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.75rem;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5em;
+}
+
+.stats h2 {
+  font-family: 'Inter', sans-serif;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+}
+
+.stats p {
+  font-size: 0.6rem;
+  margin-top: 0.5em;
+}
+
+.right {
+  position: relative;
+  background-image: url('images/image-header-desktop.jpg');
+  background-size: cover;
+  width: 50%;
+}
+
+.right::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(277, 64%, 61%, 0.4);
+}
+
+@media (max-width: 975px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 1em auto;
+  }
+  .left {
+    width: 100%;
+    text-align: center;
+    padding: 2em;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .right {
+    background: url('images/image-header-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 176px;
+    width: 100%;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+  }
+  .stats {
+    flex-direction: row;
+    margin-top: 2em;
+  }
+
+  .stats-part h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .stats {
+    flex-direction: column;
+    margin-top: 2em;
+  }
+  .stats-part {
+    margin-bottom: 2em;
+  }
+  .stats-part:last-child {
+    margin-bottom: 0;
+  }
+}
